@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+  <title>Password Generator</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title text-center m-4">Password Generator</h1>
+        <div class="card mb-4">
+          <div id="passwordTextBox" class="card-body">
+            <h3 class="text-muted password-display text-center" id="passwordDisplay">Click "Generate Password" Button</h3>
+          </div>
+        </div>
+        
+        <form id="passwordGeneratorForm" class="form">
+          <label for="characterAmountNumber">Number Of Characters</label>
+          <div class="character-amount-container">
+            <input type="range" min="1" max="50" value="10" id="characterAmountRange" style="width:400px;">
+            <input class="number-input" type="number" min="1" max="50" value="10" id="characterAmountNumber">
+          </div>
+
+          <ul>
+            <li>
+              <label for="includeUppercase">Include Uppercase</label>
+              <input type="checkbox" id="includeUppercase">
+            </li>
+            <li>
+              <label for="includeNumbers">Include Numbers</label>
+              <input type="checkbox" id="includeNumbers">
+            </li>
+            <li>
+              <label for="includeSymbols">Include Symbols</label>
+              <input type="checkbox" id="includeSymbols">
+            </li>
+          </ul>
+
+          <button type="submit" class="btn-primary">Generate Password</button>
+      </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
